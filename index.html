@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Ecommerce Website</title>
+  </head>
+  <body class="bg-gray-100 text-neutral-900 dark:text-neutral-100 dark:bg-neutral-900 body">
+
+    
+    <!--Header Section begins-->
+    <header class="w-screen p-4 md:p-10 shadow-sm shadow-black dark:shadow-gray-100 bg-transparent sticky top-0 left-0 flex justify-between items-center backdrop-blur z-10">
+      <a href="#" class="font-bold text-2xl lg:text-4xl">Ecommerce</a>
+      <button class="darkmode focus:ring-2 ring-green-800 focus:ring-offset-2 focus:ring-offset-black dark:focus:ring-offset-white rounded-md p-2 lg:p-4 cursor-pointer">Darkmode</button>
+      <div class="relative cursor-pointer flex justify-center">
+        <img src="./images/work.png" class="lg:h-12 lg:w-12 cart-icon"/>
+        <span class="absolute hidden top-0 right-0 p-2 text-sm lg:text-2xl size-3 lg:size-8 rounded-full bg-orange-400 flex justify-center items-center countbadge"></span>
+      </div>
+    </header>
+    <div class="cart fixed top-0 -right-200 w-full md:w-1/3 h-screen dark:bg-neutral-800 bg-gray-100  shadow p-4 overflow-auto z-20">
+      <div class="cart-title text-4xl text-center dark:text-gray-100 font-bold">Your Cart</div>
+      <div class="cart-content mt-4">
+        <!-- <div class="cart-box flex max-w-max items-center mt-1 gap-4 rounded">
+          <img src="./images/product1.jpg" class="cart-img object-cover size-30 rounded-sm"/>
+          <div class="cart-details grid gap-1 mr-auto">
+            <h3 class="cart-title font-serif text-2xl text-gray-100 font-bold">Cool Kid</h3>
+            <span class="cart-price text-gray-100">$100</span>
+            <div class="cart-quantity border-2 border-white flex justify-evenly rounded cursor-pointer bg-white text-neutral-900 active:text-neutral-200 active:bg-transparent active:opacity transition-transform">
+              <button id="incresment">+</button>
+              <span class="number flex justify-center items-center border-x-2 border-white px-2 text-neutral-200 bg-neutral-800 opacity-100">1</span>
+              <button id="decresment">-</button>
+            </div>
+          </div>
+          <img src="./images/close.png" class="cart-remove size-4 bg-white cursor-pointer"/>
+        </div> -->
+      </div>
+      <div class="total mt-8 border-t-2 flex border-t-gray-100 justify-end items-center gap-2">
+        <p class="total-title text-gray-100">Total Price</p>
+        <p class="total-price text-gray-100">$0</p>
+      </div>
+      <button class="btn-buy p-2 font-bold border-2 rounded mx-auto block mt-8 bg-white text-neutral-900 active:text-neutral-200 active:bg-transparent active:opacity transition-transform">Buy Now</button>
+      <img src="https://i.ibb.co/DDGZ8mQx/close.png" class="size-8 md:size-12 absolute top-4 right-4 bg-white cart-close">
+    </div>
+    <section class="shop py-8 px-4 overflow-hidden ">
+      <h1 class="section-title text-4xl lg:text-6xl font-bold text-center mb-8">Shop Product</h1>
+      <div class="product-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 px-6">
+        <div class="product-box -translate-x-64 opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100 ">
+          <div class="img-box rounded-sm flex overflow-hidden ">
+            <img src="https://i.ibb.co/3mWPwMNc/Product1.jpg" class="active:scale-110 transition-transform cursor-pointer h-full w-full object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Cool Kid</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$100</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box translate-x-64 opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/J0Bj3kK/product2.jpg" class="active:scale-110 transition-transform cursor-pointer w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Sheen Outfit</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$170</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box -translate-x-64  opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/VWq1tFJ3/product3.jpg" class="active:scale-110 transition-transform cursor-pointer w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Dexterous Guy</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$250</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box translate-x-64 opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/5XDW60vT/product4.jpg" class="active:scale-110 transition-transform cursor-pointer  w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Hot Dress</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$170</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box -translate-x-64 opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/JjTTGzfF/product5.jpg" class="active:scale-110 transition-transform cursor-pointer w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Marvelous Dress</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$149</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box translate-x-64  opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/NdfDYWCt/product6.jpg" class="active:scale-110 transition-transform cursor-pointer w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Stylish Dress</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$150</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box -translate-x-64 opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/vCCwmBKd/product7.jpg" class="active:scale-110 transition-transform cursor-pointer w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Ronaldo(CR7)</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$1000</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        <div class="product-box translate-x-64 opacity-0 transition-all duration-700 shadow-sm active:shadow-neutral-900 p-2 dark:shadow-gray-100">
+          <div class="img-box rounded-sm flex overflow-hidden">
+            <img src="https://i.ibb.co/9mZx1nnJ/product8.jpg" class="active:scale-110 transition-transform cursor-pointer w-full max-sm:h-full h-90 object-cover"/>
+          </div>
+          <h2 class="product-title text-2xl lg:text-4xl pt-2 font-semibold font-serif">Real Madrid</h2>
+          <div class="price-cart flex justify-between items-center">
+            <p class="font-semibold md:text-2xl product-price">$200</p>
+            <img src="https://i.ibb.co/wZDMS9cF/work.png" class="lg:h-12 lg:w-12 add-cart border-2 p-1 md:p-2 bg-green-200 rounded-md cursor-pointer"/>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <script src="ecommerce.js"></script>
+  </body>
+  </html>
