@@ -73,7 +73,7 @@ const addToCart = productBox =>{
       if(quantity === 1){
         decrementButton.style.color = "#999"
         updateItemCount(-1)
-      }
+     }
     }else if(event.target.classList.contains('increment')){
       quantity++
       incrementButton.style.color = "#333"
